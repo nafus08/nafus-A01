@@ -1,0 +1,26 @@
+:root{
+  --container-max: 1100px;
+  --accent: #1e40ff;
+  --dark: #0b1220;
+  --muted: #6b7280;
+  --card-bg: #fff;
+:root{
+  --accent: #1e40ff;
+  --text: #0b1220;
+}
+
+html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+.nav.container{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 20px}
+.logo{font-weight:700;letter-spacing:1px}
+.nav-center{list-style:none;display:flex;gap:22px;margin:0;padding:0;justify-self:center}
+.nav-center a{text-decoration:none;color:inherit;font-weight:600}
+.nav-cta{justify-self:end}
+.btn{display:inline-block;padding:8px 14px;border-radius:8px;border:1px solid #d1d5db;background:#fff;color:var(--text);text-decoration:none}
+.btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+
+@media (max-width:900px){
+  .nav-center{display:none}
+}
+.banner-content h1 em{font-style:italic;color:#fff}
