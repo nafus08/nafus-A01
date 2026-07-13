@@ -4,12 +4,10 @@
   --dark: #0b1220;
   --muted: #6b7280;
   --card-bg: #fff;
-:root{
-  --accent: #1e40ff;
   --text: #0b1220;
 }
 
-html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text)}
+html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text);min-height:100vh}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
 .nav.container{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 20px}
@@ -23,4 +21,22 @@ html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe
 @media (max-width:900px){
   .nav-center{display:none}
 }
+
+.banner{min-height:520px;background-image:url('./images/banner.jpg');background-size:cover;background-position:center;display:flex;align-items:center}
+.banner .overlay{background:linear-gradient(rgba(7,10,14,0.65), rgba(7,10,14,0.65));width:100%;padding:60px 0;display:flex;align-items:center;justify-content:center}
+.banner-content{max-width:900px;text-align:center;color:#fff;padding:0 20px}
+.banner-content h1{font-size:64px;margin:0 0 18px;font-weight:800;line-height:1.05}
 .banner-content h1 em{font-style:italic;color:#fff}
+.banner-content p{color:rgba(255,255,255,0.9);max-width:760px;margin:0 auto 24px;line-height:1.8}
+.banner-btn{background:var(--accent);padding:12px 26px;border-radius:10px;color:#fff;text-decoration:none;display:inline-block}
+
+@media (max-width:900px){
+  .nav-center{display:none}
+  .banner{min-height:420px}
+  .banner-content h1{font-size:44px}
+}
+
+@media (max-width:480px){
+  .banner{min-height:360px}
+  .banner-content h1{font-size:34px}
+}
